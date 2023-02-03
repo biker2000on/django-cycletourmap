@@ -1,6 +1,7 @@
 .DS_Store
 node_modules
 /dist
+docker-compose.override.yml
 
 # local env files
 .env.local
@@ -20,18 +21,6 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw*
-
-#amplify
-amplify/\#current-cloud-backend
-amplify/.config/local-*
-amplify/backend/amplify-meta.json
-amplify/backend/awscloudformation
-build/
-dist/
-node_modules/
-aws-exports.js
-awsconfiguration.json
-amplify\mock-data
 
 # python 
 *.xlsx
