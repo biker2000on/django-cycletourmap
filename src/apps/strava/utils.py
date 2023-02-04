@@ -75,7 +75,7 @@ def get_new_strava_activities(tour):
     if last_act:
         last_timestamp = int(time.mktime(last_act.start_date.timetuple()))
     else:
-        last_timestamp = int(time.mktime(Tour.start_date.timetuple()))
+        last_timestamp = int(time.mktime(tour.start_date.timetuple()))
     activities = get_strava_activities(
         tour.user, tour, access_token, page=page, last_timestamp=last_timestamp
     )
