@@ -44,6 +44,7 @@ class TourList(LoginRequiredMixin, ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["client_id"] = settings.STRAVA_CLIENTID
+        context["ROOT_URL"] = settings.ROOT_URL
         return context
 
 

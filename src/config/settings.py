@@ -38,6 +38,7 @@ allowed_hosts = os.getenv("ALLOWED_HOSTS", ".localhost,127.0.0.1,[::1]")
 ALLOWED_HOSTS = list(map(str.strip, allowed_hosts.split(",")))
 # ALLOWED_HOSTS = []
 CSRF_TRUSTED_ORIGINS = ["https://*.cycletourmap.com"]
+ROOT_URL = os.getenv("ROOT_URL", "http://localhost:8000")
 
 # Application definition
 
