@@ -2,6 +2,7 @@
 node_modules
 /dist
 docker-compose.override.yml
+public_collected
 
 # local env files
 .env.local

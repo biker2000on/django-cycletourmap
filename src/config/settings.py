@@ -33,8 +33,11 @@ SECRET_KEY = "django-insecure-40o3*ui1nkjxf7yqz(wgk&22a3r)f!p14@bw99xx+afh@fnqvd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = strtobool(os.getenv("DEBUG", "false"))
 
-ALLOWED_HOSTS = []
-
+# https://docs.djangoproject.com/en/4.1/ref/settings/#std:setting-ALLOWED_HOSTS
+allowed_hosts = os.getenv("ALLOWED_HOSTS", ".localhost,127.0.0.1,[::1]")
+ALLOWED_HOSTS = list(map(str.strip, allowed_hosts.split(",")))
+# ALLOWED_HOSTS = []
+CSRF_TRUSTED_ORIGINS = ["https://*.cycletourmap.com"]
 
 # Application definition
 
